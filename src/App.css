@@ -1,38 +1,89 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+  background-color: black;
+  margin-top: 10px;
+  height: 70px;
+}
+button {
+  margin: 5px;
+  margin-top: 20px;
+  background-color: transparent;
+  color: azure;
+  cursor: pointer;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border: 1px transparent solid;
+  background-color: transparent;
+  position: static;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.contact {
+  color: black; 
+  background-color: transparent;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  display: flexbox; 
+  flex-flow: column-reverse; 
+  position:fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.slideshow{
+  display:flex;
+  align-items: flex-start;
+  background: #fff;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.slideshow .slide img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.5) rotate(14deg);
+  -webkit-animation: slideshow 32s infinite;
+  animation: slideshow 32s infinite;
+}
+
+.slideshow .slide:nth-child(3) img {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+.slideshow .slide:nth-child(2) img {
+  -webkit-animation-delay: 16s;
+  animation-delay: 16s;
+}
+
+.slideshow .slide:nth-child(1) img {
+  -webkit-animation-delay: 24ss;
+  animation-delay: 24s;
+}
+
+@keyframes slideshow {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@-webkit-keyframes slideshow {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    opacity: 0;
   }
 }
