@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 .footer {
   background-color: black;
   margin-top: 10px;
@@ -20,6 +18,10 @@ button {
   position: relative;
   font-size: larger;
 }
+.aboutimage .content {
+  width: auto;
+  display: inline;
+}
 
 .contact {
   color: black; 
@@ -29,7 +31,6 @@ button {
   flex-direction: column-reverse;
   position: absolute; 
   text-align:left;
-  display:inline-block;
   float: right;
   margin-left: 85%;
   font-size: x-large;
@@ -44,10 +45,11 @@ button {
   height: 70vh;
   overflow: hidden;
   position: relative;
+  margin-top: 0.2%;
 
 }
 
-.slideshow .slide img {
+.slideshow .slide img{
   position: absolute;
   min-width: 100%;
   min-height: 100%;
@@ -94,4 +96,27 @@ button {
   40% {
     opacity: 0;
   }
+}
+.briefnote{
+  display: flex;
+  align-items: center;
+}
+p{
+  margin-top: 6%;
+  font-family: cursive;
+  width: auto;
+  height: auto;
+  font-size: x-large;
+  height: auto;
+}
+.firstpre{
+  font-family: cursive;
+}
+.smallButton{
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  width: 200px;
+  padding-right: 35px;
+
 }
